@@ -1,0 +1,152 @@
+/* Общие стили */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #F4A460; /* Песчаный фон */
+  }
+  
+  /* Танк */
+  .tank-container {
+    position: fixed;
+    bottom: 50px; /* Танк находится на дороге */
+    left: -200px; /* Начальная позиция танка за экраном */
+  }
+  
+  .tank {
+    width: 120px; /* Размер танка */
+    height: auto;
+    animation: move-tank 7s linear infinite; /* Анимация движения танка */
+  }
+  
+  /* Анимация движения танка */
+  @keyframes move-tank {
+    0% {
+      transform: translateX(-200px);
+    }
+    100% {
+      transform: translateX(100vw); /* Танк движется вправо */
+    }
+  }
+  
+  /* Облака */
+  .clouds {
+    position: fixed;
+    top: 10%; /* Расположение облаков */
+    width: 100%;
+    height: 100px;
+    pointer-events: none; /* Облака не мешают кликам */
+  }
+  
+  .cloud {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cloud.cloud-1 {
+    width: 80px;
+    height: 50px;
+    top: 20px;
+    left: -100px; /* За экраном */
+    animation: move-clouds 15s linear infinite;
+  }
+  
+  .cloud.cloud-2 {
+    width: 120px;
+    height: 70px;
+    top: 50px;
+    left: -150px; /* За экраном */
+    animation: move-clouds 20s linear infinite;
+  }
+  
+  .cloud.cloud-3 {
+    width: 100px;
+    height: 60px;
+    top: 10px;
+    left: -200px; /* За экраном */
+    animation: move-clouds 25s linear infinite;
+  }
+  
+  /* Анимация облаков */
+  @keyframes move-clouds {
+    0% {
+      transform: translateX(-150px);
+    }
+    100% {
+      transform: translateX(100vw); /* Движение за экран вправо */
+    }
+  }
+  
+  /* Камни */
+  .rocks {
+    position: fixed;
+    bottom: 45px;
+    width: 100%;
+    height: 50px;
+    pointer-events: none;
+  }
+  
+  .rock {
+    position: absolute;
+    background: #8B4513; /* Коричневый цвет для камней */
+    border-radius: 50%;
+  }
+  
+  .rock.rock-1 {
+    width: 20px;
+    height: 15px;
+    bottom: 10px;
+    left: 20%;
+  }
+  
+  .rock.rock-2 {
+    width: 25px;
+    height: 20px;
+    bottom: 15px;
+    left: 50%;
+  }
+  
+  .rock.rock-3 {
+    width: 30px;
+    height: 25px;
+    bottom: 5px;
+    left: 80%;
+  }
+  
+  /* Кактусы */
+  .cacti {
+    position: fixed;
+    bottom: 50px;
+    width: 100%;
+    height: 200px;
+    pointer-events: none;
+  }
+  
+  .cactus {
+    position: absolute;
+    background: #228B22; /* Зеленый цвет для кактусов */
+    border-radius: 5px;
+  }
+  
+  .cactus.cactus-1 {
+    width: 20px;
+    height: 60px;
+    bottom: 0;
+    left: 15%;
+  }
+  
+  .cactus.cactus-2 {
+    width: 25px;
+    height: 80px;
+    bottom: 0;
+    left: 45%;
+  }
+  
+  .cactus.cactus-3 {
+    width: 30px;
+    height: 100px;
+    bottom: 0;
+    left: 75%;
+  }
